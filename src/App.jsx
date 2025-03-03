@@ -1,12 +1,18 @@
 //  Video 38-2 start here
 import "./App.css";
+import Todo from "./Todo";
 
 function App() {
   return (
     <>
       <h1>Vite + React</h1>
 
-      <Device name="laptop" price="55k" />
+      {/* For Video 38-6 */}
+      <Todo task="Learn React" isDone={true} />
+      <Todo task="Explore core Concepts" isDone={false} />
+      <Todo task="Try JSX" isDone={true} />
+
+      {/* <Device name="laptop" price="55k" />
       <Device name="Mobile" price="15k" />
       <Device name="Watch" price="3k" />
 
@@ -17,7 +23,7 @@ function App() {
       <Student grade={12} score = "85" />
       <Student />
 
-      <Developer />
+      <Developer /> */}
     </>
   );
 }
@@ -41,7 +47,7 @@ function Person() {
   );
 }
 
-function Student({ grade =1, score =0 }) {
+function Student({ grade = 1, score = 0 }) {
   // console.log(props)
   return (
     <div className="student">
