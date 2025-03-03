@@ -1,10 +1,22 @@
 //  Video 38-2 start here
 import Actor from "./Actor";
 import "./App.css";
+import BookStore from "./BookStore";
 import Singer from "./Singer";
 import Todo from "./Todo";
 
 function App() {
+
+
+  // For Video 38-9 
+
+  const books = [ 
+    {id: 1, name: 'Physics', price : 120},
+    {id: 2, name: 'Chemistry', price : 130},
+    {id: 3, name: 'Math', price : 140},
+    {id: 4, name: 'Biology', price : 150},
+    {id: 5, name: 'English', price : 160},
+  ]
 
 
   // For Video 38-8  
@@ -23,6 +35,14 @@ function App() {
   return (
     <>
       <h1>Vite + React</h1>
+
+
+      {/* For Video 38-9 */}
+
+      <BookStore books={books} />
+
+
+
 
 
       {/* For Video 38-8 */}
