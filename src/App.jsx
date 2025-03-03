@@ -1,16 +1,49 @@
 //  Video 38-2 start here
+import Actor from "./Actor";
 import "./App.css";
+import Singer from "./Singer";
 import Todo from "./Todo";
 
 function App() {
+
+
+  // For Video 38-8  
+
+  const actors = ['Sakib', 'Shoriful Raj', 'Jasim', 
+    'Rubel', 'Salman shah'
+   ]
+
+   const singers = [
+    {  name:'Dr. Mahfuzur Rahman', age: 65,}, 
+    {name: 'Eva Rahman', age: 35}, 
+    {name: 'Shuvro Dev', age: 45},
+    {name: 'Priton', age: 29},
+  ]
+
   return (
     <>
       <h1>Vite + React</h1>
 
+
+      {/* For Video 38-8 */}
+
+      {
+        singers.map(singer => <Singer singer={singer}  />)
+      }
+
+
+      <Actor name="Bappa Raz" />
+
+      {
+        actors.map(actor => <Actor name={actor} />)
+      }
+
+
+
       {/* For Video 38-6 */}
-      <Todo task="Learn React" isDone={true} />
+      {/* <Todo task="Learn React" isDone={true} />
       <Todo task="Explore core Concepts" isDone={false} />
-      <Todo task="Try JSX" isDone={true} />
+      <Todo task="Try JSX" isDone={true} /> */}
 
       {/* <Device name="laptop" price="55k" />
       <Device name="Mobile" price="15k" />
