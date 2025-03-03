@@ -6,15 +6,15 @@ function App() {
     <>
       <h1>Vite + React</h1>
 
-      <Device name="laptop" price = "55k" />
-      <Device name="Mobile" price = "15k"/>
-      <Device name="Watch" price = "3k"/>
+      <Device name="laptop" price="55k" />
+      <Device name="Mobile" price="15k" />
+      <Device name="Watch" price="3k" />
 
       <Person />
       <Person />
       <Person />
-      <Student grade = "7" score="99"  />
-      <Student />
+      <Student grade="7" score="99" />
+      <Student grade={12} score = "85" />
       <Student />
 
       <Developer />
@@ -24,7 +24,7 @@ function App() {
 
 // Video 38-3 start here
 
-// 
+//
 
 function Person() {
   const age = 25;
@@ -41,34 +41,28 @@ function Person() {
   );
 }
 
-function Student(props) {
-
-  console.log(props)
-  return  ( 
-  <div className="student">
-    <h3>This is a student</h3>
-    <p>Class: </p>
-    <p>score: </p>
-  </div>
-  )
+function Student({ grade =1, score =0 }) {
+  // console.log(props)
+  return (
+    <div className="student">
+      <h3>This is a student</h3>
+      <p>Class: {grade} </p>
+      <p>score: {score} </p>
+    </div>
+  );
 }
-
-
 
 // Video 38-3 end here
 
+// Video 38-4 start here
 
-
-// Video 38-4 start here 
-
-function Developer (){
-
+function Developer() {
   const developerStyle = {
-    margin : '20px',
-    padding : '20px',
-    border : '2px solid green',
-    borderRadius: '10px'
-  }
+    margin: "20px",
+    padding: "20px",
+    border: "2px solid green",
+    borderRadius: "10px",
+  };
   return (
     <div style={developerStyle}>
       <h2>This is a Developer</h2>
@@ -78,18 +72,17 @@ function Developer (){
   );
 }
 
-
-
-function Device (props){
+function Device(props) {
   console.log(props);
 
-  return <h2>This Device :{props.name} Price: {props.price} </h2>
+  return (
+    <h2>
+      This Device :{props.name} Price: {props.price}{" "}
+    </h2>
+  );
 }
 
 // Video 38-4 end here
-
-
-
 
 export default App;
 
