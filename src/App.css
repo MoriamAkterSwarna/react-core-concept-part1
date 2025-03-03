@@ -40,3 +40,18 @@
 .read-the-docs {
   color: #888;
 }
+
+
+
+/* Video 38-4 styles start here  */
+
+/* Student style */
+
+.student{
+   border: 2px solid tomato; 
+   padding: 20px;
+   margin: 20px;
+   border-radius: 10px;
+}
+
+
